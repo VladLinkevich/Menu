@@ -20,6 +20,7 @@ public class SettingUIHandler : MonoBehaviour
 
     public void DisableSettingPanel()
     {
+        GetComponent<RectTransform>().anchoredPosition3D = Vector3.zero;
         gameObject.SetActive(false);
     }
 }
