@@ -5,8 +5,8 @@ using UnityEngine.UI;
 
 public class AutoThrowButtonHandler : MonoBehaviour
 {
-    [FormerlySerializedAs("positiveImage")] public Image[] positiveImages;
-    [FormerlySerializedAs("negativeImage")] public Image[] negativeImages;
+    public Image[] positiveImages;
+    public Image[] negativeImages;
 
     public bool defaultState;
 
