@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class SettingChip : MonoBehaviour
 {
     public Image image;
+    public Sprite defaultSprite;
     
     private string KEY;
     
@@ -28,5 +29,10 @@ public class SettingChip : MonoBehaviour
     private void OnDisable()
     {
         PlayerPrefs.SetString(KEY, image.sprite.name);
+    }
+
+    public void OnResetButton()
+    {
+        image.sprite = defaultSprite;
     }
 }

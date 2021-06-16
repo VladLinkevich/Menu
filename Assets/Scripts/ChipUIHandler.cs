@@ -50,6 +50,8 @@ public class ChipUIHandler : MonoBehaviour
             PlayerPrefs.SetInt(MINUTE_KEY, _endTime.Minute);
             PlayerPrefs.SetInt(SECOND_KEY, _endTime.Second);
         }
+        
+        ChangeState(ChipState.None);
     }
     
     public void OnClickChipButton()
@@ -91,6 +93,8 @@ public class ChipUIHandler : MonoBehaviour
         {
             if (ChipsHandler.Instance == true)
                 ChipsHandler.Instance.SetNewSelectedShip(this);
+            else
+                ChangeState(ChipState.Default);
         }
         
         images = FindImage();

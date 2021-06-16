@@ -46,6 +46,15 @@ public class ToggleUI : MonoBehaviour
         TriggerAnim();
     }
     
+    public void OnResetButton()
+    {
+        if (_isActive == false)
+        {
+            _isActive = true;
+            TriggerAnim();
+        }
+    }
+    
     private void TriggerAnim()
     {
         animator.ResetTrigger(Deactive);

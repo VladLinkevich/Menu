@@ -239,7 +239,7 @@ MonoBehaviour:
   chipImage: {fileID: 4385103149071984462}
   unlockTimeText: {fileID: 6387155442418631432}
   defaultState: 0
-  unlockTime: 10
+  unlockTime: 300
 --- !u!1 &2584549046019190243
 GameObject:
   m_ObjectHideFlags: 0
