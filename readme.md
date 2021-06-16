@@ -1,0 +1,1 @@
+Билд приложения можно скачать [здесь](https://github.com/VladLinkevich/Menu/blob/main/Build/Build.rar)
