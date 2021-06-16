@@ -236,6 +236,7 @@ MonoBehaviour:
   - state: 4
     images:
     - {fileID: 5749816193864876548}
+  chipImage: {fileID: 4385103149071984462}
   unlockTimeText: {fileID: 6387155442418631432}
   defaultState: 0
   unlockTime: 10
@@ -582,6 +583,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stateImage: []
+  chipImage: {fileID: 0}
   unlockTimeText: {fileID: 0}
   defaultState: 0
   unlockTime: 0

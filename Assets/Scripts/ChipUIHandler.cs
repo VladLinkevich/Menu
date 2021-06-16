@@ -9,6 +9,7 @@ using UnityEngine.UI;
 public class ChipUIHandler : MonoBehaviour
 {
     public ShipStateImage[] stateImage;
+    public Image chipImage;
     public TMP_Text unlockTimeText;
     
     public ChipState defaultState;
@@ -36,11 +37,6 @@ public class ChipUIHandler : MonoBehaviour
         save = save == 0 ? (int) defaultState : save;
         
         ChangeState((ChipState)save);
-        
-        if (_currentState == ChipState.Unlock)
-        {
-
-        }
     }
 
     private void OnDisable()
@@ -71,6 +67,7 @@ public class ChipUIHandler : MonoBehaviour
     public void ChangeState(ChipState state)
     {
         if (state == ChipState.Unlock &&
+            ChipsHandler.Instance == true && 
             ChipsHandler.Instance.IsHaveUnlockedChip == true)
         {
             return;
@@ -85,14 +82,15 @@ public class ChipUIHandler : MonoBehaviour
 
         _currentState = state;
         
-        if (_currentState == ChipState.Selected)
-        {
-            ChipsHandler.Instance.SetNewSelectedShip(this);
-        }
-
         if (_currentState == ChipState.Unlock)
         {
             CalculateTime();
+        }
+        
+        if (_currentState == ChipState.Selected)
+        {
+            if (ChipsHandler.Instance == true)
+                ChipsHandler.Instance.SetNewSelectedShip(this);
         }
         
         images = FindImage();
